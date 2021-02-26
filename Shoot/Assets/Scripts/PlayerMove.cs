@@ -19,8 +19,9 @@ public class PlayerMove : MonoBehaviour
 
         Vector3 dir = new Vector3(h, v, 0);
 
-        transform.position = transform.position + dir * speed * Time.deltaTime;
 
+        //transform.position = transform.position + dir * speed * Time.deltaTime;
+        transform.position += dir * speed * Time.deltaTime;
 
     }
 }
