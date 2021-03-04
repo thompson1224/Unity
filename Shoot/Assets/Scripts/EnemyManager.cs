@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+
+    float minTime = 1;
+    float maxTime = 5;
+
+
     float currentTime;
 
     //일정 시간
 
-    public float createTime = 1;
-
+    public float createTime;
     // 적 공장
 
     public GameObject enemyFactory;
@@ -17,7 +21,7 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        createTime = UnityEngine.Random.Range(minTime, maxTime);
     }
 
     // Update is called once per frame
